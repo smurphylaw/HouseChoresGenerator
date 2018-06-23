@@ -2,13 +2,16 @@ var express = require('express');
 var router = express.Router();
 var UserModel = require('../models/userModel');
 
+router.use('/generator', require('./generator.js'));
+
 router.get('/', function(req, res) {
-  res.render('home');
+//    res.render('home');
+    res.render('generator');
 });
 
 // GET - Register 
 router.get('/register', function(req, res, next) {
-    
+    res.render('register');
 });
 
 // POST - Register
@@ -50,7 +53,7 @@ router.post('/register', function*(req, res, next) {
 
 // GET - Login
 router.get('/login', function(req, res, next) {
-    
+    res.render('login');
 });
 
 

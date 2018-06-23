@@ -4,5 +4,7 @@ var UserModel = require('../models/userModel');
 
 // GET - Register 
 router.get('/', function(req, res, next) {
-    
+    res.render('generator');
 });
+
+module.exports = router;

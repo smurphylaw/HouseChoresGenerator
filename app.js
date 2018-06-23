@@ -42,11 +42,11 @@ app.use(session({
 const path = require('path');
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('/', function(req, res) {
-  res.render('generator');
-});
+//app.get('/', function(req, res) {
+//  res.render('generator');
+//});
 
-//app.use('/', routes);
+app.use('/', routes);
 //app.use('/generator', require('./routes/generator.js'));
 
 app.use(function(req,res){
