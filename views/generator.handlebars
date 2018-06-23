@@ -1,35 +1,57 @@
-<h1>Generator:</h1>
-{{#each foo}}
-{{this}}
-{{/each}}
-<table>
-    <thead> 
-        <th>First Name</th> 
-        <th>Last Name</th> 
-        <th>Homeworld</th>
-        <th>Age</th>  
-    </thead> 
-    <tbody> 
-        {{#each people}} 
-        <tr> 
-            <td>{{fname}}</td> 
-            <td>{{lname}}</td> 
-            <td>{{homeworld}}</td> 
-            <td>{{age}}</td>
-            <td><button onclick="deletePerson({{id}})">Delete</button></td>
-            <td><a href="/people/{{id}}">Update</a></td>
-        </tr> 
-        {{/each}} 
-    </tbody> 
-    <form id="addperson" action="/people" method="post">
-    First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br>
-    Homeworld: <select name="homeworld"> 
-        {{#each planets}}
-        <option value="{{id}}">{{name}}</option>
-        {{/each}}
-    </select><br>
-    Age: <input type="number" name="age"><br>
-    <input type="submit" value="Submit">
-    </form>
-</table> 
+<!-- Page Header -->
+<div class="jumbotron">
+<h1>Chores Generator</h1>
+</div>
+
+<!-- Display current list of chores selected-->
+<h1>Current Chores<h1>
+	 <table>
+   
+        <thead>
+        <th>Name</th>
+        <th>Priority</th>
+        <th>Difficulty</th>
+        <th>Frequency</th>
+        </thead>
+        
+        <tbody>
+            {{#each chore}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{priority}}</td>
+                <td>{{difficulty}}</td>
+                <td>{{frequency}}</td>
+                <td><button onclick="deleteChore({{id}})">Delete</button></td>
+                <td><a href="/chore/{{id}}">Update</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+        
+    </table>
+
+<!-- Add a chore-->
+<h1>Add a personalized chore to your lineup</h1>
+<form id="addChore" action="/chore" method = "post">
+		<fieldset>
+    		Name: <input type="text" name="name"><br>
+        Priority: 
+        			<select>
+              	<option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+        Difficulty:
+        	<select>
+              	<option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+        Frequency:  
+						<input type="text" name="frequency"><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+<form>
