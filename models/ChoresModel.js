@@ -16,6 +16,10 @@ var choresSchema = new mongoose.Schema({
     },
     frequency: {
         type: String
+    },
+    _user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }
 });
 

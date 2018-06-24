@@ -12,57 +12,26 @@
     </thead>
 
     <tbody>
-        <tr>
-            <th scope="row">Scrub counters</th>
-            <td>2</td>
-            <td>4</td>
-            <td>Weekly</td>
-            <td> <button type="submit" class="btn btn-primary btn-xs">Edit</button></td>
-            <td> <button type="submit" class="btn btn-warning btn-xs">Delete</button></td>
-        </tr>
-        <tr>
-            <th scope="row">Vacuum</th>
-            <td>5</td>
-            <td>1</td>
-            <td>Weekly</td>
-            <td> <button type="submit" class="btn btn-primary btn-xs">Edit</button></td>
-            <td> <button type="submit" class="btn btn-warning btn-xs">Delete</button></td>
-        </tr>
-        <tr>
-            <th scope="row">Laundry</th>
-            <td>3</td>
-            <td>1</td>
-            <td>Weekly</td>
-            <td> <button type="submit" class="btn btn-primary btn-xs">Edit</button></td>
-            <td> <button type="submit" class="btn btn-warning btn-xs">Delete</button></td>
-        </tr>
+        {{#each chores}}
+            <tr>
+                <th scope="row">{{name}}</th>
+                <td>{{priority}}</td>
+                <td>{{difficulty}}</td>
+                <td>{{frequency}}</td>
+                <td>
+                    <button type="submit" class="btn btn-primary btn-xs">
+                        <a href="/chore/{{_id}}">Update</a>
+                    </button>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-warning btn-xs" onclick="deleteChore()">Delete</button>
+                </td>
+            </tr>
+        {{/each}}
+        
+        
     </tbody>
 
 </table>
 
-<!-- Display current list of chores selected-->
-<!--
-<h1>Current Chores<h1>
-<table>
-
-    <thead>
-    <th>Name</th>
-    <th>Priority</th>
-    <th>Difficulty</th>
-    <th>Frequency</th>
-    </thead>
-
-    <tbody>
-        {{#each chore}}
-        <tr>
-            <td>{{name}}</td>
-            <td>{{priority}}</td>
-            <td>{{difficulty}}</td>
-            <td>{{frequency}}</td>
-            <td><button onclick="deleteChore({{id}})">Delete</button></td>
-            <td><a href="/chore/{{id}}">Update</a></td>
-        </tr>
-        {{/each}}
-    </tbody>
-
-</table>-->
+<script src="deleteChore.js"></script>
