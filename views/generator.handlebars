@@ -1,6 +1,4 @@
 <div class="jumbotron">
-<!--    <h1>Chores Generator</h1>-->
-    
     <p id="choreResult">Let's play!</p>
     
     <div class="generate-button">
@@ -8,36 +6,12 @@
     </div>
 </div>
 
-<!--
-<div id="choreResult">
-</div>
--->
-
-<!-- Display current list of chores selected-->
-<!--
-<h1>Current Chores<h1>
-<table>
-
-    <thead>
-    <th>Name</th>
-    <th>Priority</th>
-    <th>Difficulty</th>
-    <th>Frequency</th>
-    </thead>
-
-    <tbody>
-        {{#each chore}}
-        <tr>
-            <td>{{name}}</td>
-            <td>{{priority}}</td>
-            <td>{{difficulty}}</td>
-            <td>{{frequency}}</td>
-            <td><button onclick="deleteChore({{id}})">Delete</button></td>
-            <td><a href="/chore/{{id}}">Update</a></td>
-        </tr>
-        {{/each}}
-    </tbody>
-
-</table>-->
+{{#if currentUser}}
+{{else}}
+    <div class="signup-info">
+        <p>Want to modify your own list? Split the chores among households?</p>
+        <p><a href="register">Sign up for full access!</a></p>
+    </div>
+{{/if}}
 
 <script src="chooseChore.js"></script>

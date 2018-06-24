@@ -30,7 +30,7 @@ router.post('/add', function(req, res, next) {
            if (err) {
                return next(err);
            } else {
-               return res.redirect('/');
+               return res.redirect('/chores');
            }
         });
     } else {

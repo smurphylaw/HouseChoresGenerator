@@ -151,3 +151,8 @@ h3 {
 .jumbotron button {
     text-transform: uppercase;
 }
+
+.signup-info {
+    margin: 25px;
+    text-align: center;
+}

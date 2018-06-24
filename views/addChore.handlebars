@@ -6,7 +6,7 @@
     <section id="addChoreForm">
         <div class="addChore-box">
             <h3>Add a personalized chore to your lineup</h3>
-            <form class="addChore-form" action="/addChore" method="post">
+            <form class="addChore-form" action="/chores/add" method="post">
 
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -25,8 +25,8 @@
                     
                     <br />
 
-                    <label for="priority">Difficulty:</label>
-                    <select>
+                    <label for="difficulty">Difficulty:</label>
+                    <select name="difficulty">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

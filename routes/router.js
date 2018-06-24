@@ -3,7 +3,7 @@ var router = express.Router();
 var UserModel = require('../models/userModel');
 var mid = require('./authChecker.js')
 
-router.get('/', function(req, res) {
+router.get('/', mid.authChecker, function(req, res) {
     res.render('home');
 //    res.render('generator');
 });
