@@ -58,8 +58,12 @@ router.post('/add', function(req, res, next) {
 // DELETE - Chore
 
 router.delete('/', function(req, res){
-    console.log('id: ' + req.body._id)
-    ChoresModel.remove({_id: req.body._id});
+    
+    ChoresModel.remove({_id: req.params.id}, function (err) {
+        if (err) {
+               return next(err);
+           }
+    });
 })
 
 module.exports = router;

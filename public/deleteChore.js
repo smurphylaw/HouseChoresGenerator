@@ -1,4 +1,5 @@
-function deleteChore(){
+function deleteChore(id){
+    
     $.ajax({
         url: '/chores',
         type: 'DELETE',
