@@ -1,0 +1,45 @@
+<h3>Current Household</h3>
+<table class="table">
+
+    <thead>
+        <tr>
+            <th scope="col">Name:</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Rob</td>
+            <td> <button type="submit" class="btn btn-warning btn-xs">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Sara</td>
+            <td> <button type="submit" class="btn btn-warning btn-xs">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Katie</td>
+            <td> <button type="submit" class="btn btn-warning btn-xs">Delete</button></td>
+        </tr>
+    </tbody>
+
+</table>
+
+<!-- Add a person-->
+<div class="addHousehold-panel active">
+    <section id="addHouseholdForm">
+        <div class="addHousehold-box">
+            <h3>Add a person</h3>
+            <form class="addHousehold-form" id="addHousehold" action="/household" method="post">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter person name">
+                </div>
+
+                <div class="submit-button">
+                    <input type="submit" class="btn btn-primary" id="addHousehold" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

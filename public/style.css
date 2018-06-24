@@ -57,7 +57,8 @@ input[type="text"] {
 }
 
 .login-box,
-.signup-box {
+.signup-box,
+.addChore-box {
     width: 100%;
     padding-top: 25px;
     margin: 0 auto;
@@ -65,33 +66,91 @@ input[type="text"] {
 }
 
 .login-box label,
-.signup-box label {
+.signup-box label,
+.addChore-box label {
     width: 30%;
     text-align: right;
     padding-right: 5px;
 }
 
+.addChore-box label {
+    width: auto;
+    text-align: left;
+}
+
 .login-box input,
-.signup-box input{
+.signup-box input,
+.addChore-form input {
     width: 50%;
     display: inline-block;
     border-radius: 5px;
 }
 
+.addChore-form input {
+    width: 70%;
+}
+
 .login-form,
-.signup-form {
+.signup-form,
+.addChore-form {
     width: 50%;
     display: inline-block;
     text-align: center;
     margin: 0 auto;
 }
 
+.addChore-form {
+    text-align: left;
+}
+
+.submit-button {
+    text-align: center;
+    margin-top: 25px;
+}
+
 input#log-in,
-input#sign-up {
+input#sign-up,
+input#addChore {
     border: none;
     height: 40px;
     margin: 5px 10px;
     text-transform: uppercase;
+}
+
+input#addChore {
+    width: 30%;
+}
+
+input[type="submit"]#addChore {
+    margin: 0 auto;
+    
+}
+
+input#log-in,
+input#sign-up {
     color: #EEE;
     background-color: #303030;
+}
+
+h3 {
+    padding: 15px 25px 0px 25px;
+}
+
+.addChore-form {
+    border: 2px solid black;
+    padding: 25px;
+}
+
+/*
+.addChore-form input {
+    width: 40%;
+    display: inline-block;
+}
+*/
+
+.form-group {
+/*    width: 50%;*/
+    padding-left: 0%;
+    width: 70%;
+    margin: 0 auto;
 }

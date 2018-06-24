@@ -3,8 +3,6 @@ var router = express.Router();
 var UserModel = require('../models/userModel');
 var mid = require('./authChecker.js')
 
-router.use('/generator', require('./generator.js'));
-
 router.get('/', function(req, res) {
     res.render('home');
 //    res.render('generator');
@@ -93,5 +91,10 @@ router.get('/logout', function(req, res, next){
         });
     }
 });
+
+router.use('/chores', require('./chores.js'));
+router.use('/household', require('./household.js'));
+router.use('/generator', require('./generator.js'));
+router.use('/schedule', require('./schedule.js'));
 
 module.exports = router;

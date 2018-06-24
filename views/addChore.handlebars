@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+    
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+<div class="addChore-panel active">
+    <section id="addChoreForm">
+        <div class="addChore-box">
+            <h3>Add a personalized chore to your lineup</h3>
+            <form class="addChore-form" action="/addChore" method="post">
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" id="chore-name" placeholder="Enter chore name">
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select name="priority">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    
+                    <br />
+
+                    <label for="priority">Difficulty:</label>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Frequncy:</label>
+                    <input type="text" class="form-control" name="frequency" id="name" placeholder="Ex: once a week, once a month, etc">
+                </div>
+                
+                <div class="submit-button">
+                    <input type="submit" class="btn btn-primary" id="addChore" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

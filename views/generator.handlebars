@@ -5,53 +5,26 @@
 
 <!-- Display current list of chores selected-->
 <h1>Current Chores<h1>
-	 <table>
-   
-        <thead>
-        <th>Name</th>
-        <th>Priority</th>
-        <th>Difficulty</th>
-        <th>Frequency</th>
-        </thead>
-        
-        <tbody>
-            {{#each chore}}
-            <tr>
-                <td>{{name}}</td>
-                <td>{{priority}}</td>
-                <td>{{difficulty}}</td>
-                <td>{{frequency}}</td>
-                <td><button onclick="deleteChore({{id}})">Delete</button></td>
-                <td><a href="/chore/{{id}}">Update</a></td>
-            </tr>
-            {{/each}}
-        </tbody>
-        
-    </table>
+<table>
 
-<!-- Add a chore-->
-<h1>Add a personalized chore to your lineup</h1>
-<form id="addChore" action="/chore" method = "post">
-		<fieldset>
-    		Name: <input type="text" name="name"><br>
-        Priority: 
-        			<select>
-              	<option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-        Difficulty:
-        	<select>
-              	<option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-        Frequency:  
-						<input type="text" name="frequency"><br>
-        <input type="submit" value="Submit">
-    </fieldset>
-<form>
+    <thead>
+    <th>Name</th>
+    <th>Priority</th>
+    <th>Difficulty</th>
+    <th>Frequency</th>
+    </thead>
+
+    <tbody>
+        {{#each chore}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{priority}}</td>
+            <td>{{difficulty}}</td>
+            <td>{{frequency}}</td>
+            <td><button onclick="deleteChore({{id}})">Delete</button></td>
+            <td><a href="/chore/{{id}}">Update</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
