@@ -94,6 +94,10 @@ input[type="text"] {
     margin-top: 25px;
 }
 
+.generate-button button {
+    margin-right: 10px;
+}
+
 input#log-in,
 input#sign-up,
 input#addChore {
@@ -155,4 +159,8 @@ h3 {
 .signup-info {
     margin: 25px;
     text-align: center;
+}
+
+#scheduleResult {
+    display: none;
 }

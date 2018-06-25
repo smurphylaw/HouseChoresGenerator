@@ -7,3 +7,13 @@ function chooseChore() {
         }
     });
 }
+
+function scheduleChore() {
+    $.ajax({
+        url: 'schedule/scheduleChore',
+        type: 'GET',
+        success: function(result){
+             document.getElementById('scheduleResult').style.display = "block";    
+        }
+    });
+}

@@ -3,10 +3,28 @@
     
     <div class="generate-button">
         <button onclick="chooseChore()">Randomly pick a chore</button>
+        <button onclick="scheduleChore()">Schedule My Chores!</button>
     </div>
 </div>
 
 {{#if currentUser}}
+<div id="scheduleResult">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Chore</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each chores}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td> <button type="submit" class="btn btn-warning btn-xs">Done</button></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
 {{else}}
     <div class="signup-info">
         <p>Want to modify your own list? Split the chores among households?</p>
