@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var UserModel = require('../models/userModel');
+var UserModel = require('../models/UserModel');
 var ChoresModel = require('../models/ChoresModel');
 var mid = require('./authChecker.js')
 

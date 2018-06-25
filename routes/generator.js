@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-//var UserModel = require('../models/userModel');
 var ChoresModel = require('../models/ChoresModel');
 
 var listOfChores = ['Take out the trash', 'Wash the car', 'Vacuum your bedroom', 'Do the dishes', 'Clean surface area in living room'];

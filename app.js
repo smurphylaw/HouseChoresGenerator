@@ -16,7 +16,6 @@ var handlebars = require('express-handlebars').create({
 
 
 // Connect to MongoDB
-//mongoose.connect('mongodb://localhost/test');
 mongoose.connect('mongodb://localhost:27017/housechores');
 var db = mongoose.connection;
 
@@ -29,7 +28,7 @@ db.once('open', function() {
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', process.argv[2]);
+app.set('port', 3000);
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
